@@ -14,9 +14,9 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EntityScan(basePackages ={"request_mgmt"})
-@EnableJpaRepositories(basePackages ={"request_mgmt"})
-@ComponentScan(basePackages ={"request_mgmt"})
+@EntityScan(basePackages ={"request_mgmt","catalog_mgmt","config"})
+@EnableJpaRepositories(basePackages ={"request_mgmt","catalog_mgmt","config"})
+@ComponentScan(basePackages ={"request_mgmt","catalog_mgmt","config"})
 public class ServTransStoreMain extends SpringBootServletInitializer  
 {
 
@@ -35,7 +35,7 @@ public class ServTransStoreMain extends SpringBootServletInitializer
 	    executor.setCorePoolSize(50);
 	    executor.setMaxPoolSize(100);
 	    executor.setQueueCapacity(500);
-	    executor.setThreadNamePrefix("prodservmods");
+	    executor.setThreadNamePrefix("prodser");
 	    executor.initialize();
 	    return executor;
 	  }
