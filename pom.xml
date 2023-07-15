@@ -11,10 +11,10 @@
 	</parent>
 
 	<groupId>myABC</groupId>
-	<artifactId>supporting.supporting-service-or-order-to-pay</artifactId>
+	<artifactId>supporting.ratex</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>supporting.supporting-service-or-order-to-pay</name>
+	<name>supporting.ratex</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -102,6 +102,6 @@
 			</plugin>
 		</plugins>
 
-		<finalName>supporting.supporting-service-or-order-to-pay</finalName>
+		<finalName>supporting.ratex</finalName>
 	</build>
 </project>
