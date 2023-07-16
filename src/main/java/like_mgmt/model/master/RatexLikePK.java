@@ -1,15 +1,17 @@
-package forum_mgmt.detail.model.master;
+package like_mgmt.model.master;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+
 import javax.persistence.*;
 
 /**
- * The primary key class for the RATEX_RATING_DETAILS database table.
+ * The primary key class for the RATEX_LIKES database table.
  * 
  */
 @Embeddable
-public class RatexForumItemRatingDetailPK implements Serializable {
+public class RatexLikePK implements Serializable {
+	// default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
 	@Column(name = "ITEM_SEQ_NO")
@@ -21,7 +23,7 @@ public class RatexForumItemRatingDetailPK implements Serializable {
 	@Column(name = "ON_DTTM")
 	private Timestamp onDttm;
 
-	public RatexForumItemRatingDetailPK() {
+	public RatexLikePK() {
 	}
 
 	public Long getItemSeqNo() {
@@ -52,10 +54,10 @@ public class RatexForumItemRatingDetailPK implements Serializable {
 		if (this == other) {
 			return true;
 		}
-		if (!(other instanceof RatexForumItemRatingDetailPK)) {
+		if (!(other instanceof RatexLikePK)) {
 			return false;
 		}
-		RatexForumItemRatingDetailPK castOther = (RatexForumItemRatingDetailPK) other;
+		RatexLikePK castOther = (RatexLikePK) other;
 		return (this.itemSeqNo == castOther.itemSeqNo) && (this.sourceSeqNo == castOther.sourceSeqNo)
 				&& this.onDttm.equals(castOther.onDttm);
 	}
@@ -66,10 +68,11 @@ public class RatexForumItemRatingDetailPK implements Serializable {
 		hash = hash * prime + ((int) (this.itemSeqNo ^ (this.itemSeqNo >>> 32)));
 		hash = hash * prime + ((int) (this.sourceSeqNo ^ (this.sourceSeqNo >>> 32)));
 		hash = hash * prime + this.onDttm.hashCode();
+
 		return hash;
 	}
 
-	public RatexForumItemRatingDetailPK(Long itemSeqNo, Long sourceSeqNo, Timestamp onDttm) {
+	public RatexLikePK(Long itemSeqNo, Long sourceSeqNo, Timestamp onDttm) {
 		super();
 		this.itemSeqNo = itemSeqNo;
 		this.sourceSeqNo = sourceSeqNo;

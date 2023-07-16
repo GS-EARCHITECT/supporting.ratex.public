@@ -21,8 +21,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @RestController
-@RequestMapping("/ratexForumItemRatingDetailsReadMgmt")
-public class RatexForumItemRatingDetailsRead_Controller 
+@RequestMapping("/ratexForumItemRatingMasterMgmt")
+public class RatexForumItemRatingMaster_Controller 
 {
 
 //	private static final Logger logger = LoggerFactory.getLogger(Customer_Rating_Controller.class);

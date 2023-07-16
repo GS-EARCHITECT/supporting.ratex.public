@@ -1,18 +1,18 @@
-package forum_mgmt.detail.model.dto;
+package like_mgmt.model.dto;
 
 import java.io.Serializable;
 
-public class RatexForumItemRatingDetail_DTO implements Serializable {
+public class RatexLike_DTO implements Serializable {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 670784974765848451L;
+	private static final long serialVersionUID = 4148605579736263698L;
 	private Long itemSeqNo;
 	private Long sourceSeqNo;
 	private String onDttm;
-	private Float rating;
-	private Character visible;
+	private Character likeFlag;
+	private String visible;
 
 	public Long getItemSeqNo() {
 		return itemSeqNo;
@@ -38,34 +38,33 @@ public class RatexForumItemRatingDetail_DTO implements Serializable {
 		this.onDttm = onDttm;
 	}
 
-	public Float getRating() {
-		return rating;
+	public Character getLikeFlag() {
+		return likeFlag;
 	}
 
-	public void setRating(Float rating) {
-		this.rating = rating;
+	public void setLikeFlag(Character likeFlag) {
+		this.likeFlag = likeFlag;
 	}
 
-	public Character getVisible() {
+	public String getVisible() {
 		return visible;
 	}
 
-	public void setVisible(Character visible) {
+	public void setVisible(String visible) {
 		this.visible = visible;
 	}
 
-	public RatexForumItemRatingDetail_DTO() {
-		super();
-	}
-
-	public RatexForumItemRatingDetail_DTO(Long itemSeqNo, Long sourceSeqNo, String onDttm, Float rating,
-			Character visible) {
+	public RatexLike_DTO(Long itemSeqNo, Long sourceSeqNo, String onDttm, Character likeFlag, String visible) {
 		super();
 		this.itemSeqNo = itemSeqNo;
 		this.sourceSeqNo = sourceSeqNo;
 		this.onDttm = onDttm;
-		this.rating = rating;
+		this.likeFlag = likeFlag;
 		this.visible = visible;
+	}
+
+	public RatexLike_DTO() {
+		super();
 	}
 
 }

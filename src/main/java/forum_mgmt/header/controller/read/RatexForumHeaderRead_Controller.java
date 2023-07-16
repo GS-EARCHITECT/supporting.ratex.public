@@ -1,4 +1,4 @@
-package forum_mgmt.header.controller;
+package forum_mgmt.header.controller.read;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CopyOnWriteArrayList;
