@@ -17,7 +17,7 @@ import forum_mgmt.header.model.master.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Service("ratexForumItemForumHeaderServ")
+@Service("ratexForumHeaderReadServ")
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED)
 public class RatexForumHeaderRead_Service implements IRatexForumHeaderRead_Service {
 	// private static final Logger logger =
